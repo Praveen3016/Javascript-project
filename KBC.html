@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Crore</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        width: 300px;
+        height: 350px;
+    }
+
+    .main {
+        width: 300xp;
+        height: 350px;
+        margin: 20px 0px;
+        box-sizing: border-box;
+        overflow: hidden;
+        padding: 15px;
+        box-shadow: 0px 0px 8px rgb(129, 129, 129);
+
+    }
+
+    .qut {
+        margin-bottom: 5px;
+
+    }
+
+    .option {
+        padding: 5px;
+        border: 1px solid rgb(116, 116, 116);
+        margin: 10px 5px;
+        cursor: pointer;
+
+
+    }
+
+    .btn {
+        width: 97%;
+        margin: 5px;
+        font-size: 16px;
+        padding: 5px 0px;
+        background-color: rgb(129, 255, 129);
+        border: none;
+
+    }
+
+    .material {
+        height: 280px;
+    }
+
+    span {
+        margin-right: 3px;
+    }
+
+    .red {
+        color: rgb(0, 0, 0);
+        background-color: rgb(255, 75, 75);
+    }
+
+    .green {
+        background-color: rgb(48, 255, 48);
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">KBC, 7 Crore</h1>
+        <div class="main">
+            <div class="material" id="material">
+                <div class="qut">
+                    <h4 style="text-align: center; color: blue;">Question 1</h4>
+                    <p style="text-align: center; margin-top: 7px;">Who is the Prime Minister of india
+                    <pre></pre>
+                    </p>
+                </div>
+                <hr>
+                <p class="option " id="notok1" onclick="notok1()"> <span>1:</span>Rahul Gandhy</p>
+                <p class="option " id="notok2" onclick="notok2()"> <span>2:</span>Tilak Prajapati</p>
+                <p class="option " id="notok3" onclick="notok3()"> <span>3:</span>Chai Wala</p>
+                <p class="option" id="ans1" onclick="ok()"> <span>4:</span>Narendra Modi</p>
+
+
+            </div>
+            <div class="material" style="background-color: rgb(255, 255, 255); display: none;">
+                <div class="qut">
+                    <h4 style="text-align: center; color: blue;">Question 2</h4>
+                    <p style="text-align: center; margin-top: 7px;">
+                        Current Railway Minister of India is
+                    </p>
+                </div>
+                <hr>
+                <p class="option wrong" id="notok4" onclick="notok4()"> <span>1:</span>Mamta Banarjee</p>
+                <p class="option wrong" id="notok5" onclick="notok5()"> <span>2:</span>Ram Vilash</p>
+                <p class="option" id="ans2" onclick="ok2()"> <span>3:</span>Ashwini Vaishnaw</p>
+                <p class="option wrong" id="notok6" onclick="notok6()"> <span>4:</span>Piyush Goyal</p>
+
+
+            </div>
+            <div class="material" style="background-color: rgb(255, 255, 255); display: none;">
+                <div class="qut">
+                    <h4 style="text-align: center; color: blue;">Question 3</h4>
+                    <p style="text-align: center; margin-top: 7px;">What does not grow on tree according to a popular
+                        Hindi saying?
+                    </p>
+                </div>
+                <hr>
+                <p class="option" id="ans3" onclick="ok3()"> <span>1:</span>Money</p>
+                <p class="option wrong" id="notok7" onclick="notok7()"> <span>2:</span>Flowers</p>
+                <p class="option wrong" id="notok8" onclick="notok8()"> <span>3:</span>Leaves</p>
+                <p class="option wrong" id="notok9" onclick="notok9()"> <span>4:</span>Fruits</p>
+
+
+            </div>
+            <div class="material" style="background-color: rgb(255, 255, 255); display: none;">
+                <div class="qut">
+                    <h4 style="text-align: center; color: blue;">Question 4</h4>
+                    <p style="text-align: center; margin-top: 7px;">Which city is known as Pink City in India?
+                    </p>
+                </div>
+                <hr>
+                <p class="option wrong" id="notok10" onclick="notok10()"> <span>1:</span>Banglore</p>
+                <p class="option wrong" id="notok11" onclick="notok11()"> <span>2:</span>Maysore</p>
+                <p class="option" id="ans4" onclick="ok4()"> <span>3:</span>Jaipur</p>
+                <p class="option wrong" id="notok12" onclick="notok12()"> <span>4:</span>Kochi</p>
+
+
+            </div>
+            <div class="material" style="background-color: rgb(255, 255, 255); display: none;">
+                <div class="qut">
+                    <h4 style="text-align: center; color: blue;">Question 5</h4>
+                    <p style="text-align: center; margin-top: 7px;">Who wrote India's National Anthem?
+                    </p>
+                </div>
+                <hr>
+                <p class="option" id="ans5" onclick="ok5()"> <span>1:</span>Rabindranath Tagore</p>
+                <p class="option wrong" id="notok13" onclick="notok13()"> <span>2:</span>Lal Bahadur Shastri</p>
+                <p class="option wrong" id="notok14" onclick="notok14()"> <span>3:</span>Chetan Bhagat</p>
+                <p class="option wrong" id="notok15" onclick="notok15()"> <span>4:</span>RK Narayan</p>
+
+
+            </div>
+            <div class="material" style=" display: none; align-items: center;">
+
+                <h4 style="text-align: center;">Score</h4>
+                <p style="text-align: center; font-size: 20px; margin-top: 20px; font-weight: 700;">
+                    <span id="Score" style="color: green;">3</span> out of 5
+                </p>
+              
+                <audio src="7 Crore Amitabh Bachhan No Copyright Meme.mp3" id="audio" style="visibility: hidden;" controls autoplay></audio>
+
+            </div>
+            <button class="btn" id="btn">Next</button>
+            <button class="btn" id="btn2" style="display: none;" onclick="location.reload()">Again</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        let material = document.getElementsByClassName("material");
+        let next = document.getElementById("btn");
+        let truee = document.getElementById("ok");
+        let wrong = document.getElementsByClassName("wrong");
+        let count = 1;
+        let score = 0;
+
+
+
+
+
+        next.addEventListener("click", nextt);
+
+        function nextt() {
+
+
+
+            for (let i = 0; i < 5; i++) {
+                material[i].style.display = "none";
+            }
+
+            material[count].style.display = "block";
+            console.log("block")
+            if (count == 5) {
+                next.style.display = "none";
+                document.getElementById("btn2").style.display = "block";
+                document.getElementById("Score").innerHTML = score;
+                document.getElementById("audio").play();
+            }
+
+            count++;
+        }
+
+        // Question 1
+        function ok() {
+            document.getElementById("ans1").classList.add("green")
+            score++;
+        }
+        function notok1() {
+            document.getElementById("notok1").classList.add("red");
+            document.getElementById("ans1").classList.add("green")
+        }
+        function notok2() {
+            document.getElementById("notok2").classList.add("red");
+            document.getElementById("ans1").classList.add("green")
+        }
+        function notok3() {
+            document.getElementById("notok3").classList.add("red");
+            document.getElementById("ans1").classList.add("green")
+        }
+
+        // question2
+
+        function ok2() {
+            document.getElementById("ans2").classList.add("green");
+            score++;
+
+        }
+        function notok4() {
+            document.getElementById("notok4").classList.add("red");
+            document.getElementById("ans2").classList.add("green");
+        }
+        function notok5() {
+            document.getElementById("notok5").classList.add("red");
+            document.getElementById("ans2").classList.add("green");
+        }
+        function notok6() {
+            document.getElementById("notok6").classList.add("red");
+            document.getElementById("ans2").classList.add("green");
+        }
+
+        // question3
+
+        function ok3() {
+            document.getElementById("ans3").classList.add("green");
+            score++;
+        }
+        function notok7() {
+            document.getElementById("notok7").classList.add("red");
+            document.getElementById("ans3").classList.add("green");
+        }
+        function notok8() {
+            document.getElementById("notok8").classList.add("red");
+            document.getElementById("ans3").classList.add("green");
+        }
+        function notok9() {
+            document.getElementById("notok9").classList.add("red");
+            document.getElementById("ans3").classList.add("green");
+        }
+        // question4
+
+        function ok4() {
+            document.getElementById("ans4").classList.add("green");
+            score++;
+        }
+        function notok10() {
+            document.getElementById("notok10").classList.add("red");
+            document.getElementById("ans4").classList.add("green");
+        }
+        function notok12() {
+            document.getElementById("notok11").classList.add("red");
+            document.getElementById("ans4").classList.add("green");
+        }
+        function notok13() {
+            document.getElementById("notok12").classList.add("red");
+            document.getElementById("ans4").classList.add("green");
+        }
+
+        // question5
+
+        function ok5() {
+            document.getElementById("ans5").classList.add("green");
+            score++;
+        }
+        function notok14() {
+            document.getElementById("notok13").classList.add("red");
+            document.getElementById("ans5").classList.add("green")
+        }
+        function notok15() {
+            document.getElementById("notok14").classList.add("red");
+            document.getElementById("ans5").classList.add("green")
+        }
+        function notok16() {
+            document.getElementById("notok15").classList.add("red");
+            document.getElementById("ans5").classList.add("green")
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
